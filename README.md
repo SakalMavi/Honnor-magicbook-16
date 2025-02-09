@@ -32,8 +32,12 @@ NootedRed.kext Amd Gpu'ların Hackintosh sistemlerinde çalışması için oluş
 
 Terminali açarak aşağıdaki kodu girin
 Code:
+
 open /Applications/Google\ Chrome.app --args --use-angle=gl
+
 Açılan google chrome'da site adreslerini yazdığımız kısma
 Code:
+
 chrome://flags/#use-angle
+
 yazdığımızda açılan ekranda Choose ANGLE graphics backend ''OpenGL'' seçin kayıt edin yeniden Google Chrome açtığınızda kırmızı dalgalanma olmayacaktır.
