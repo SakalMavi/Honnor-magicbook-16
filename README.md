@@ -1,33 +1,39 @@
-Donanımım (Opencore 0.9.5)
-Amd Ryzen 5 5600h CPU
+# Honor Magicbook 16 - MacOS Sequoia 15.2
+Bu, macOS Sequoia'yı Honnor Magicbook 16'yi yükleyebilmek için bir kılavuzdur.
+
+Bilgisayar Türü Honnor Magicbook 16 Series Notebook
+
+Amd Ryzen 5 5600h 
+
 AMD Radeon RX Vega 7
-Qualcomm WCN685x Wifi
-512GB HDD & 12GB DDR4 2133 MHz 15CL Dual Channel
-Realtek ALC256
 
-Çalışanlar
-AMD Radeon Graphics 512 MB
-Realtek ALC 256 (ALC3246) Layout ID= 95 (AppleALC.kext 1.8.9 versiyonu) (Ses+Mikrofon+Kulaklık Girişi Sorunsuz Çalışıyor)
-Klavye
-Tochpad Elan 1200
-Batarya ve pil yüzdesi
-HDMI - Henüz denemedim
-NVMe SSD (Fix kextiyle beraber)
-Hibernasyon (Uyku modu sorunsuz)
-Kapağı kapatıldığında uykuya geçme modu
-Network Type-C to Ethernet Adaptör
+Samsung 512GB SSD HDD vardı 2 TB KIOXIA-EXCERIA PRO SSD takıldı 1TB Windows11 1TB'si MacOS Sequoia
 
-Çalışmayanlar
-Qualcomm WCN685x Wifi
-Card Okuyucu Realtek RTS5287 PCI-E Kart Okuyucu
+Realtek ALC256 Ses Kartı
+
+Ses Kartı Realtek ALC668
+
+Qualcomm WCN685x Wifi Network Kartı MacOS Tarafından desteklenmediğinden intel 7260GNW Wifi Kartı aldım 
+
+DIMM0: Samsung M471A1G44AB0-CWE 8 GB DDR4-3200 MHz DDR4 SDRAM
+
+DIMM0: Samsung M471A1G44AB0-CWE 8 GB DDR4-3200 MHz DDR4 SDRAM
+
+IDE denetleyici Intel(R) 100 Series/C230 Chipset Family SATA AHCI Controller
+
+I2C HID Aygiti Elan 1200
 
 Webcam USB2.0 HD UVC WebCam
 
-I2C HID Aygiti Touchpad ELAN1000
 
-Windows 10 Yüklü bilgisayarımızda Kendi bilgisayarımızın Donanımına özel DSDT.aml ve ACPI Dosyalarını Çıkartmakla başlayacağız bunun için https://github.com/corpnewt/SSDTTime yöntemi kullanılmaktadır.
+Windows 11 Yüklü bilgisayarımızda Kendi bilgisayarımızın Donanımına özel ACPI Dosyalarını Çıkartmakla başlayacağız bunun için [https://github.com/corpnewt/SSDTTime](https://github.com/5T33Z0/OC-Little-Translated/blob/main/P_OpCore_Simplify/README.md) rehberini takip ederek hem ACPI Dosyalarını hem de güncel KEXT ve Opencore EFI sini oluşturdum. Kurulumumu sorunsuz gerçekleştirdim.
 
-https://github.com/corpnewt/SSDTTime/archive/master.zip
-bu siteden indiriniz
-indirdikden sonra 2 tane dosyamız var biri bat uzantılı Windows için diğeri command uzantılı MacOS için. Ben Henüz MacOS kurmadınığınızı düşündüğümden windows üzerinden bat uzantılı dosya ile Uygulamayı çalıştırıyoruz.
+NootedRed.kext Amd Gpu'ların Hackintosh sistemlerinde çalışması için oluşturulan bir driver projesi ve emeği geçen herkese sonsuz teşşekkürler. Ancak MacOS Sequoia'da Google Chrome çalışırken Gpu'nun Metal desteğini tam karşılayamadığından kırmızı renke dönüşme sorununa yol açıyor bundan kurtulmak için.
 
+Terminali açarak aşağıdaki kodu girin
+Code:
+open /Applications/Google\ Chrome.app --args --use-angle=gl
+Açılan google chrome'da site adreslerini yazdığımız kısma
+Code:
+chrome://flags/#use-angle
+yazdığımızda açılan ekranda Choose ANGLE graphics backend ''OpenGL'' seçin kayıt edin yeniden Google Chrome açtığınızda kırmızı dalgalanma olmayacaktır.
