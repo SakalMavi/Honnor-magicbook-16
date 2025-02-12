@@ -21,7 +21,7 @@ DIMM0: Samsung M471A1G44AB0-CWE 8 GB DDR4-3200 MHz DDR4 SDRAM
 
 IDE denetleyici Intel(R) 100 Series/C230 Chipset Family SATA AHCI Controller
 
-I2C HID Aygiti Elan 1200
+I2C HID Aygiti Elan 2204
 
 Webcam USB2.0 HD UVC WebCam
 
